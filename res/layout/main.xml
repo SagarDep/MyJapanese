@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"  
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+<!-- android:background="@drawable/main_background"
+	设置不可见，但占用空间 android:visibility="invisible"
+	设置不可见，并且不占用空间 android:visibility="gone"
+	但设置gone后，页面会出现白屏-->
+ 
+    
+    <RelativeLayout
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+<!-- android:background="@+drawable/title_red"-->
+        <CheckBox
+            android:id="@+id/showchinese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/showchinese" >
+        </CheckBox>
+
+        <Button
+            android:id="@+id/button2tts"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="TTS" />
+
+        <Button
+            android:id="@+id/button2ran"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button2tts"
+            android:text="Ran" />
+
+        <CheckBox
+            android:id="@+id/startRandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/showchinese"
+            android:text="Ran"/>
+
+        <Button
+            android:id="@+id/btn_mRefreshLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/classes"
+            android:text="stop" />
+<!-- android:entries="@array/classes_lables",就是因为这个在修改xml发生的小故障，导致spinner一直无法保存信息-->
+        <Spinner
+            android:id="@+id/classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"           
+             />
+<!-- spinner中的android:textSize="16dp"无效 -->
+        <Spinner
+            android:id="@+id/books"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="36dp"
+            android:layout_toRightOf="@+id/startRandom"
+            
+             />
+
+        <Button
+            android:id="@+id/button2enc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button2ran"
+            android:text="enc" />
+
+        <Button
+            android:id="@+id/button_adobe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button2enc"
+            android:layout_toRightOf="@+id/startRandom"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/classes"
+            android:layout_toLeftOf="@+id/books"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+	<FrameLayout  android:layout_width="fill_parent"
+            	 android:layout_height="fill_parent">
+		<!-- 				
+		android:entries="@array/classes_lables"		
+			
+		java.lang.ClassNotFoundException: Didn't find class "com.tuesda.walker.
+		circlerefresh.CircleRefreshLayout" on path: DexPathList[[zip file "/data/app
+		/pri.weiqiang.myjapanese-1.apk"],nativeLibraryDirect
+		ories=[/data/app-lib/pri.weiqiang.myjapanese-1, /vendor/lib, /system/lib]] 
+		注意类类名变了不一致
+		<com.tuesda.walker.circlerefresh.CircleRefreshLayout去掉.walker就可以了，并把circlerefresh换成
+		circlerefreshlayout
+		如果这里有下边的属性，优先级在先，在java中无法更改颜色，索性不变的UI就尽量在布局文件中进行吧
+		app:AniBackColor="#ff8b90af"
+        app:AniForeColor="#ffffffff"
+		
+		-->
+	    
+	<com.tuesda.circlerefreshlayout.CircleRefreshLayout
+	    xmlns:app="http://schemas.android.com/apk/res-auto"
+	    android:id="@+id/refresh_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    app:AniBackColor="#ff8b90af"
+	    app:AniForeColor="#ffffffff"
+	    app:CircleSmaller="6" >
+	    
+    <ExpandableListView
+        android:id="@+id/elistview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.58"
+        android:cacheColorHint="#00000000"
+        android:childDivider="@+drawable/list_separator_line"
+        android:divider="@+drawable/list_separator_line"
+        android:layoutAnimation="@anim/list_anim_layout"
+        android:listSelector="#00000000" >
+
+        <!-- 
+        android:layoutAnimation="@anim/list_anim_layout"没有，连randomUI也没有效果
+        	增加以后就全带动画了，而且是顺序展开，可以考虑不要加，太慢
+        android:cacheColorHint="#00000000"这个设置可以去除拖动view时背景变成黑色的效果 
+        /*字体居中*/
+        android:layout_gravity="center_vertical"
+        
+        -->
+        
+        <!-- android:listSelector="#00000000" >可以去除选中时的黄色底色 -->
+
+    </ExpandableListView>
+    </com.tuesda.circlerefreshlayout.CircleRefreshLayout>
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="3dp"
+        android:src="@drawable/ic_add_white_24dp"
+        />
+    </FrameLayout>
+  <!-- <RelativeLayout【-】多写一个-就会报错而且错误提示的信息还不是在这里，用beyond compare才发现
+  android:orientation="horizontal" >-->
+</FrameLayout>

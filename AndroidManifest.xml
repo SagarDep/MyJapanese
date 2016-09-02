@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="pri.weiqiang.myjapanese"
+      android:versionCode="2"
+      android:versionName="1.01">
+    <uses-sdk android:minSdkVersion="16" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />  
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<!-- android:theme="@style/AppTheme"保证了全局字体更换可以成为可能
+	但是Activity中的android:theme="@style/Theme.AppCompat.Light.NoActionBar"必须去掉，否则还是不能修改
+	 application相当于Activity的外层，那么就相当于父类
+	 -->
+    <application 
+        android:name="pri.weiqiang.ttf.app"        
+        android:icon="@drawable/icon" 
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="pri.weiqiang.myjapanese.SplashActivity"
+            android:configChanges="keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="pri.weiqiang.myjapanese.GuideActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar"只要使用这个就可以轻松的使用Android Design了  -->
+        <activity android:name="pri.weiqiang.myjapanese.MyExpandableListViewDemo" 
+            />
+        
+        <activity android:name="pri.weiqiang.myjapanese.SearchWord" 
+            />
+        
+        <activity android:name="pri.weiqiang.myjapanese.RememberOfWord" 
+            />
+        
+        <activity android:name="pri.weiqiang.myjapanese.JapaneseTTSActivity" 
+            />
+        
+         <activity android:name="pri.weiqiang.vocabulary.DraggableGridViewSampleActivity" 
+            />
+         
+         <activity android:name="pri.weiqiang.vocabulary.VocabDraggableView" 
+            />
+         
+         <activity android:name="pri.weiqiang.vocabulary.VocabActivity" 
+            />
+         
+         <activity android:name="pri.weiqiang.search.SearchActivity" 
+           />
+         
+		<activity android:name="pri.weiqiang.about.AboutMyJC" 
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+		
+		<activity android:name="pri.weiqiang.encryption.VoiceEncryptionActivity" 
+            />
+		
+		<activity android:name="pri.weiqiang.encryption.JLayerActivity" 
+            />
+		
+		<activity android:name="pri.weiqiang.encryption.ZipFileActivity" 
+           />
+		
+		<activity android:name="pri.weiqiang.url.GetAudioActivity" 
+            />
+         
+<!-- 我仅保留了<activity android:name="pri.weiqiang.about.AboutMyJC" 
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>中的android:theme
+上边的 android:theme="@style/Theme.AppCompat.Light.NoActionBar"全部可以不写，才能保证所有Activity的字体是统一的-->
+    </application>
+</manifest>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+
+    <!--
+    error: Error parsing XML: unbound prefix 报错，是因为acitivity没有xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="@drawable/main_background"
+    -->
+    <!--
+    修改toolbar左边这个小箭头的颜色
+	https://www.zhihu.com/question/33085834
+    -->
+    <!--
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_toolbar_vocab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_colors"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        <CheckBox
+            android:id="@+id/showchinese_vocab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/showchinese" >
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/startRandom_vocab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/startrandom" />
+            
+        </LinearLayout>
+
+        
+    </android.support.v7.widget.Toolbar>
+    
+    -->
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!--
+        android:entries="@array/classes_lables"
+						
+		java.lang.ClassNotFoundException: Didn't find class "com.tuesda.walker.
+		circlerefresh.CircleRefreshLayout" on path: DexPathList[[zip file "/data/app
+		/pri.weiqiang.myjapanese-1.apk"],nativeLibraryDirect
+		ories=[/data/app-lib/pri.weiqiang.myjapanese-1, /vendor/lib, /system/lib]] 
+		注意类类名变了不一致
+		<com.tuesda.walker.circlerefresh.CircleRefreshLayout去掉.walker就可以了，并把circlerefresh换成
+		circlerefreshlayout
+        -->
+
+        <com.tuesda.circlerefreshlayout.CircleRefreshLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/refresh_layout_vocab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:AniBackColor="#ff8b90af"
+            app:AniForeColor="#ffffffff"
+            app:CircleSmaller="6" >
+
+            <ExpandableListView
+                android:id="@+id/elistview_vocab"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="top"
+                android:layout_weight="1.58"
+                android:cacheColorHint="#00000000"
+                android:childDivider="@+drawable/list_separator_line"
+                android:divider="@+drawable/list_separator_line"
+                android:layoutAnimation="@anim/list_anim_layout"
+                android:listSelector="#00000000" >
+
+                <!-- android:cacheColorHint="#00000000"这个设置可以去除拖动view时背景变成黑色的效果 -->
+
+
+                <!-- android:listSelector="#00000000" >可以去除选中时的黄色底色 -->
+
+            </ExpandableListView>
+        </com.tuesda.circlerefreshlayout.CircleRefreshLayout>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab_vocab"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="3dp"
+            android:src="@drawable/ic_add_white_24dp" />
+    </FrameLayout>
+
+</LinearLayout>

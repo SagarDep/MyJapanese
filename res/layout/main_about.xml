@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--app:navigationIcon="@drawable/btn_play_press"
+	android:background="?attr/colorPrimary" 
+	        app:title="App Title"
+        app:subtitle="Sub Title"   -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_toolbar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="@color/blue_colors" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+           <TextView
+               android:id="@+id/textView1"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/imageView1"
+               android:layout_gravity="center_vertical|left"
+               android:autoLink="all"
+               android:paddingLeft="12dp"
+               android:paddingRight="12dp"
+               android:paddingTop="12dp"
+               android:text="@string/link_text_auto"
+               android:textSize="17dp" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/profile" />
+
+            <Button
+                android:id="@+id/btn_guide_again"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="#00000000"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="12dp"
+                android:text="再看一次导航页" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

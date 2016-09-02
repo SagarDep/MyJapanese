@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"  
+    android:orientation="vertical"
+    android:background="@drawable/main_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    
+<!-- 如果没有xmlns:app="http://schemas.android.com/apk/res-auto",报Error parsing XML: unbound prefix
+android:background="@drawable/main_background"-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_toolbar_search"      
+        app:navigationIcon="?attr/homeAsUpIndicator"        
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="@color/blue_colors" >
+        <EditText
+            android:id="@+id/searchword_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:hint="请输入查询的中文或日文"
+            android:inputType="textMultiLine" >
+            <requestFocus />
+        </EditText>
+    	<CheckBox
+            android:id="@+id/showchinese_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/showchinese" />
+    </android.support.v7.widget.Toolbar>
+
+	<FrameLayout  android:layout_width="match_parent"
+            	 android:layout_height="match_parent">
+	    
+	<com.tuesda.circlerefreshlayout.CircleRefreshLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:AniBackColor="#ff8b90af"
+        app:AniForeColor="#ffffffff"
+        app:CircleSmaller="6"
+        android:id="@+id/refresh_layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ExpandableListView
+        android:id="@+id/elistview_search"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.58"
+        android:cacheColorHint="#00000000"
+        android:childDivider="@+drawable/list_separator_line"
+        android:divider="@+drawable/list_separator_line"
+        android:layoutAnimation="@anim/list_anim_layout"
+        android:listSelector="#00000000" >
+    </ExpandableListView>
+
+    </com.tuesda.circlerefreshlayout.CircleRefreshLayout>
+    
+    
+    
+    
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab_search"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="3dp"
+        android:src="@drawable/ic_add_white_24dp"
+        />
+    </FrameLayout>
+  <!-- <RelativeLayout【-】多写一个-就会报错而且错误提示的信息还不是在这里，用beyond compare才发现
+  android:orientation="horizontal" >-->  
+
+</LinearLayout>

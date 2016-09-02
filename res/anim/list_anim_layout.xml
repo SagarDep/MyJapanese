@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+	android:delay="0.2"
+    android:animation="@anim/list_anim"/>
+ <!-- 我在更换使用android:theme="@style/Theme.AppCompat.Light.NoActionBar"这个主题后，
+ 	发现从开始进入Activity就会有动画，所以下边两项必须屏蔽，或者直接删除list_anim_layout.xml
+ 	android:delay="0.02"
+    android:animationOrder="normal"  -->

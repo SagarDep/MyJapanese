@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="classes_lables">
+		<item>大家的日本语第一册</item>
+		<item>大家的日本语第二册</item>
+		<item>新版标准日本语中级上</item>
+		<item>新版标准日本语中级下</item>
+		<item>新版标准日本语初级上</item>
+		<item>新版标准日本语初级下</item>
+		<item>新编日语I</item>
+		<item>新编日语II</item>
+		<item>新编日语III</item>
+		<item>新编日语IV</item>
+		
+	</string-array>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+<android.support.v7.widget.Toolbar
+         android:id="@+id/id_toolbar_drag"      
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="@color/blue_colors" />
+
+    <!--  <Button
+	    android:id="@+id/button2"
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_toRightOf="@+id/button1"
+	    android:text="@string/button2Text"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/button1Text" />
+        -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/id_toolbar_drag"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <pri.weiqiang.vocabulary.DraggableGridView
+                android:id="@+id/vgv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:colCount="3"
+                app:itemHeight="110dp"
+                app:itemWidth="110dp" >
+            </pri.weiqiang.vocabulary.DraggableGridView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MyExpandableListViewDemo!</string>
+    <string name="app_name">鲤鱼日语</string>
+    <string name="showchinese">展开</string>
+    <string name="startrandom">乱序</string>
+     <string name="about">关于本app</string>
+     <string name="word">生词本</string>
+     <string name="search">查询</string>
+     <string name="button1Text">Add Word</string>
+    <string name="button2Text">View Poem</string>
+    <string name="link_text_auto">鲤鱼日语是自己利用业余时间编写个一个简单纯粹的记忆app，它包含了大家的日本语，新版标准日本语，新编日语几套常见的日语教材，编写的原因就是自己想回归纯粹的“死记硬背”模式，我觉得鲤鱼日语的特点就是支持下拉整个列表，单词开始乱序排序，在死背的基础上强化记忆，所谓鲤鱼会乱动，然后就是单词每课一结，算是“回归初心”，希望能给初学日语的同学们提供一定帮助。
+PS:单词读音需要联网，因纯粹个人学习作品，恐有疏漏，请批评指正。\nemail:weiqiang_1989@126.com \ngithub:https://github.com/54wall \ncsdn:http://blog.csdn.net/weiqiang_1989
+</string>
+
+
+
+</resources>

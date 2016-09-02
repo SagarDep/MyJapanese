@@ -1,0 +1,31 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+        	非常重要，这里决定了全局更换字体的关键
+        	如果改成Theme.AppCompat.Light.NoActionBar ，则这里会报错，然后导致R文件不会自动生成，然后就是在TestActivity.java
+        	中也无法读取布局文件
+        android:Theme.Light.NoTitleBar [old]
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:typeface">serif</item>
+    </style>
+    
+	<style name="loading_dialog_0704" parent="android:style/Theme.Dialog">  
+	    <item name="android:windowFrame">@null</item>  
+	    <item name="android:windowNoTitle">true</item>   
+	    <item name="android:windowIsFloating">true</item>  
+	    <item name="android:windowContentOverlay">@null</item>  
+	</style>
+	
+	<style name="CustomCheckboxTheme_01" 
+	    parent="@android:style/Widget.CompoundButton.CheckBox">  
+    <item name="android:button">@drawable/checkbox_style_01</item>  
+	</style> 
+</resources>
