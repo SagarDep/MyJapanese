@@ -1,7 +1,11 @@
 鲤鱼日语是自己利用业余时间编写个一个简单纯粹的记忆app，它包含了大家的日本语，新版标准日本语，新编日语几套常见的日语教材。
 可以先下载试试
+###注意：lib_need中包含了所有要使用的lib和jar，也要导入到Ecplise的Android的项目中，因为工作机器太落后……AndroidStudio完全无法带起……
 鲤鱼日语：
-下载链接1：<a href="http://shouji.baidu.com/software/9855124.html">百度</a> 下载链接2：<a href="http://shouji.baidu.com/software/9855124.html">91</a> 下载链接3：<a href="http://shouji.baidu.com/software/9855124.html">安卓</a>
+Github：<a href="https://github.com/54wall/MyJapanese">鲤鱼日语</a> 
+下载链接1：<a href="http://shouji.baidu.com/software/9855124.html">百度</a> 
+下载链接2：<a href="http://apk.91.com/Soft/Android/pri.weiqiang.myjapanese-2-1.01.html">91</a> 
+下载链接3：<a href="http://apk.hiapk.com/appinfo/pri.weiqiang.myjapanese/2">安卓</a>
 
 ![鲤鱼日语](https://github.com/54wall/MyJapanese/blob/master/readme/icon.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
