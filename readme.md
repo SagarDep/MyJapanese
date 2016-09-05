@@ -41,10 +41,12 @@ app的酷炫效果当然不是我自己做的了，全部来自Github，感谢
 
 [tuesda](https://github.com/tuesda)/**[CircleRefreshLayout](https://github.com/tuesda/CircleRefreshLayout)**
 
-![FloatingActionButton.gif](https://github.com/tuesda/CircleRefreshLayout/blob/master/gif/circlerefresh.gif?imageMogr2/auto-orient/strip)
+![CircleRefreshLayout.gif](https://github.com/tuesda/CircleRefreshLayout/blob/master/gif/circlerefresh.gif?imageMogr2/auto-orient/strip)
 
 
 [greenrobot](https://github.com/greenrobot)/**[greenDAO](https://github.com/greenrobot/greenDAO)**
 
 [andyken](https://github.com/andyken)/**[DraggableGridView](https://github.com/andyken/DraggableGridView)**
+
+![DraggableGridView.gif](https://github.com/andyken/DraggableGridView/blob/master/sample/sample.gif?imageMogr2/auto-orient/strip)
 
