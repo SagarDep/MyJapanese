@@ -33,12 +33,16 @@ Github：<a href="https://github.com/54wall/MyJapanese">鲤鱼日语</a>
 鲤鱼日语：
 下载链接1：<a href="http://shouji.baidu.com/software/9855124.html">百度</a> 下载链接2：<a href="http://shouji.baidu.com/software/9855124.html">91</a> 下载链接3：<a href="http://shouji.baidu.com/software/9855124.html">安卓</a>
 app的酷炫效果当然不是我自己做的了，全部来自Github，感谢
+
 [makovkastar](https://github.com/makovkastar)/**[FloatingActionButton](https://github.com/makovkastar/FloatingActionButton)**
 
 ![FloatingActionButton.gif](https://github.com/makovkastar/FloatingActionButton/blob/master/art/demo.gif?imageMogr2/auto-orient/strip)
 
 
 [tuesda](https://github.com/tuesda)/**[CircleRefreshLayout](https://github.com/tuesda/CircleRefreshLayout)**
+
+![FloatingActionButton.gif](https://github.com/tuesda/CircleRefreshLayout/blob/master/gif/circlerefresh.gif?imageMogr2/auto-orient/strip)
+
 
 [greenrobot](https://github.com/greenrobot)/**[greenDAO](https://github.com/greenrobot/greenDAO)**
 
