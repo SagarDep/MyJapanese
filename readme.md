@@ -49,6 +49,7 @@ app的酷炫效果当然不是我自己做的了，全部来自Github，感谢
 [andyken](https://github.com/andyken)/**[DraggableGridView](https://github.com/andyken/DraggableGridView)**
 
 ![DraggableGridView.gif](https://github.com/andyken/DraggableGridView/blob/master/sample/sample.gif?imageMogr2/auto-orient/strip)
+
 TTS使用：
 
 [gimite](https://github.com/gimite)/**[android-jatts](https://github.com/gimite/android-jatts)**
